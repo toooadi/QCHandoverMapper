@@ -2,6 +2,7 @@ from src.trackers.tracker import Tracker
 from src.atutil.celltracker import CellTracker
 
 # Implicit handovers, i.e. when requesting connection from RRC idle mode to a new cell with a valid TMSI
+# These requests do not guarantee a handover to have happened
 class ImplicitHandoverServiceRequestTracker(Tracker):
 
     def __init__(self, enb_sets, current_set,  window_size, tracker : CellTracker = None, verbose: bool = False):
